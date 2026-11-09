@@ -60,3 +60,7 @@ Los colores están como variables CSS al inicio de `css/styles.css`.
 4. Espera uno o dos minutos. La URL será `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`.
 
 Alternativas: Netlify (arrastrar la carpeta en *Add new site → Deploy manually*) o Cloudflare Pages (conectar el repositorio, sin comando de build y con el directorio de salida vacío o `/`).
+
+# Practica-html
+Practica sencilla de html - css - javascript
+

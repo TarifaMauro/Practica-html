@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050909">
+  <meta name="description" content="Una pequeña sorpresa animada: un jardín nocturno de flores amarillas.">
+  <title>Flores amarillas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-state="welcome">
+
+  <!-- Degradados SVG compartidos por todas las flores (no se ven) -->
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="g-halo">
+        <stop offset="0" stop-color="#ffd633" stop-opacity=".42"/>
+        <stop offset=".45" stop-color="#ffcf2e" stop-opacity=".14"/>
+        <stop offset="1" stop-color="#ffcf2e" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="g-petal-back" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#e99a00"/>
+        <stop offset="1" stop-color="#ffd21f"/>
+      </linearGradient>
+      <linearGradient id="g-petal-front" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#ffb800"/>
+        <stop offset="1" stop-color="#ffe85c"/>
+      </linearGradient>
+      <radialGradient id="g-center">
+        <stop offset="0" stop-color="#ffc83d"/>
+        <stop offset="1" stop-color="#e28a00"/>
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <!-- Capas decorativas: estrellas y partículas (las crea script.js) -->
+  <div class="sky" id="stars" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <main class="stage">
+
+    <!-- ESTADO 1: bienvenida -->
+    <section class="welcome" id="welcome" aria-labelledby="welcomeText">
+      <h1 class="welcome__text" id="welcomeText"></h1>
+      <div class="cta">
+        <button class="btn-glow" id="startBtn" type="button"></button>
+      </div>
+    </section>
+
+    <!-- ESTADO 2: jardín + mensaje permanente + botón de reinicio -->
+    <section class="garden" id="garden" aria-label="Jardín de flores amarillas">
+      <div class="flowers" id="flowers" aria-hidden="true"></div>
+      <div class="ground" aria-hidden="true"></div>
+
+      <div class="message" id="message">
+        <p class="message__main" id="messageMain"></p>
+        <p class="message__sub" id="messageSub"></p>
+      </div>
+
+      <button class="btn-restart" id="restartBtn" type="button"></button>
+    </section>
+
+  </main>
+
+  <noscript>
+    <p class="noscript">Esta experiencia necesita JavaScript activado para funcionar.</p>
+  </noscript>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
